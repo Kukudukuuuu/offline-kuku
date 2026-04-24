@@ -1,6 +1,6 @@
 # 📡 offline-kuku
 
-> Offline real-time chat for devices on the same local network. No internet, no accounts, no cloud.
+> Offline real-time chat for devices on the same local network.
 
 ![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen?style=flat-square&logo=node.js&logoColor=white)
 ![WebSockets](https://img.shields.io/badge/transport-websockets-4ec9b0?style=flat-square)
@@ -11,9 +11,9 @@
 
 ## What is this
 
-Two files. One Node.js server, one HTML client. One person starts the server, everyone on the same Wi-Fi opens `client.html` in a browser and connects. That's the whole thing.
+Two files. One Node.js server, one HTML client and everyone on the same network can access it in a browser and connect via the server ip. 
 
-Built with IBM Plex Mono and a terminal aesthetic. No frameworks, no build step, no accounts.
+Built with IBM Plex Mono and a terminal aesthetic. No frameworks, no build step.
 
 ---
 
@@ -65,9 +65,9 @@ The terminal prints your local IP:
 
 ```
 ╔════════════════════════════════════════════╗
-║      LAN CHAT SERVER  —  online            ║
+║      Kuku CHAT SERVER  —  online           ║
 ╠════════════════════════════════════════════╣
-║  ws://192.168.1.42:4242                    ║
+║  ws://192.168.1.**:4242                    ║
 ╠════════════════════════════════════════════╣
 ║  history 80 msgs · ping 25s · rate 5/s     ║
 ╚════════════════════════════════════════════╝
@@ -77,7 +77,7 @@ Keep this terminal open.
 
 ### 2 — Connect (all devices)
 
-Open `client.html` in a browser. No server required — it's a plain HTML file.
+Open `client.html` in a browser. No server required.
 
 - **Server address** → paste the `ws://` address from step 1
 - **Your name** → whatever you want
